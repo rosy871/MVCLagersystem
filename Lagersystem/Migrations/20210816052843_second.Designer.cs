@@ -4,14 +4,16 @@ using Lagersystem.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Lagersystem.Migrations
 {
     [DbContext(typeof(LagersystemContext))]
-    partial class LagersystemContextModelSnapshot : ModelSnapshot
+    [Migration("20210816052843_second")]
+    partial class second
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

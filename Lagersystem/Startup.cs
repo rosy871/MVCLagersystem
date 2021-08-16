@@ -55,7 +55,7 @@ namespace Lagersystem
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Products}/{action=Index}/{id?}");
+                    pattern: "{controller=Products}/{action=ProductsList}/{id?}");
             });
         }
     }

@@ -98,7 +98,8 @@ namespace Lagersystem.Controllers
             {
                 _context.Add(product);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                //return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(ProductsList));
             }
             return View(product);
         }
@@ -149,7 +150,7 @@ namespace Lagersystem.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(ProductsList));
             }
             return View(product);
         }
@@ -180,7 +181,7 @@ namespace Lagersystem.Controllers
             var product = await _context.Product.FindAsync(id);
             _context.Product.Remove(product);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(ProductsList));
         }
 
 
